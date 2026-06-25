@@ -96,7 +96,7 @@ nav.scrolled {
   box-shadow: 0 1px 6px rgba(0,0,0,0.25);
 }
 
-/* GRID — always 2 columns */
+/* GRID */
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -280,6 +280,56 @@ footer {
 .footer-copy { margin-top: 24px; font-size: 11px; color: var(--muted); opacity: 0.4; }
 
 
+
+@media (min-width: 720px) {
+  nav {
+    padding: 0 28px;
+  }
+
+  .hero {
+    padding: 48px 24px 30px;
+  }
+
+  .hero-title {
+    font-size: 46px;
+  }
+
+  .search-wrap,
+  .filter-wrap,
+  .grid {
+    width: min(100% - 48px, 1180px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .search-wrap {
+    padding: 18px 0 10px;
+  }
+
+  .filter-wrap {
+    padding: 10px 0 14px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+    padding: 8px 0 30px;
+  }
+}
+
+@media (min-width: 980px) {
+  .grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1240px) {
+  .grid {
+    width: min(100% - 64px, 1320px);
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 16px;
+  }
+}
 
 @keyframes mwIn  { from{opacity:0;transform:translateY(60px) scale(0.93)} to{opacity:1;transform:translateY(0) scale(1)} }
 @keyframes mwOut { from{opacity:1;transform:translateY(0) scale(1)} to{opacity:0;transform:translateY(60px) scale(0.93)} }
